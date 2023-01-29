@@ -22,6 +22,14 @@ module BlogApi
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
+    config.aws_sdk = {
+      access_key_id: ENV['S3_KEY'],
+      secret_access_key: ENV['S3_SECRET'],
+      region: 'eu-west-2',
+      s3: {
+          bucket: 'imagestoragemvp'
+      }
+    }
     config.api_only = true
   end
 end

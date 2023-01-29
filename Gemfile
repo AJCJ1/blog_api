@@ -24,6 +24,12 @@ gem "puma", "~> 5.0"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
+# use aws S3 to store the images for blog posts
+gem 'aws-sdk-rails'
+
+# use active model serializers to turn posts to JSON
+gem 'active_model_serializers'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
@@ -46,3 +52,4 @@ group :development do
   # gem "spring"
 end
 
+gem "dotenv-rails", groups: [:development, :test]
