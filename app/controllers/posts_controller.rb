@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   ActiveModelSerializers.config.adapter = :json
   def index
     @posts = Post.all
-    render json: @posts, include: [:image]
+    render json: @posts
   end
 
   def details
@@ -11,7 +11,7 @@ class PostsController < ApplicationController
     if @post.nil?
       redirect_to posts_path
     else
-      render json: @post, include: [:image]
+      render json: @post
     end
   end
 end
