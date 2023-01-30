@@ -27,6 +27,9 @@ gem "puma", "~> 5.0"
 # use aws S3 to store the images for blog posts
 gem 'aws-sdk-rails'
 
+# adds aability to allow requests to react app
+gem 'rack-cors'
+
 # use active model serializers to turn posts to JSON
 gem 'active_model_serializers'
 
